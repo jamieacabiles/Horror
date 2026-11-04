@@ -1,0 +1,4 @@
+# Skabelon. Installeres kun som robots.txt fra domænets rod efter aftale.
+User-agent: *
+Allow: /
+# Tilføj Sitemap med den faktiske, absolutte URL, når domæne og mappe kendes.
