@@ -449,13 +449,35 @@ img {
   line-height: 1.4;
   color: #c9cece;
 }
+/* Figma: billedet starter bag mobilheaderen og beskæres ved galleriet. */
+.experience-backdrop {
+  overflow: clip;
+}
 .experience-intro {
+  position: relative;
+  isolation: isolate;
   padding-top: 27px;
   padding-bottom: 55px;
   min-height: 657px;
-  background:
-    linear-gradient(transparent 75%, var(--night)),
-    url("../images/forest-headlights.webp") center top/auto 100% no-repeat;
+}
+.experience-intro::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  pointer-events: none;
+  top: -158px;
+  bottom: 0;
+  left: -51.99%;
+  width: 203.73%;
+  background: url("../images/forest-headlights.webp") left top / cover no-repeat;
+}
+.experience-intro::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 0;
+  background: linear-gradient(transparent calc(100% - 97px), var(--night));
 }
 .story {
   padding-left: 8px;
@@ -510,8 +532,9 @@ img {
   padding-top: 47px;
   padding-bottom: 47px;
   background:
-    linear-gradient(var(--night), #10141799),
-    url("../images/forest-headlights.webp") center 65% / cover;
+    linear-gradient(var(--night), rgba(43, 48, 44, 0.25) 72.35px, rgba(43, 48, 44, 0.25)),
+    url("../images/forest-headlights.webp") 50.044% top / 260.26% auto no-repeat;
+  background-color: var(--night);
 }
 .testimonials h2 {
   max-width: 700px;
@@ -572,6 +595,14 @@ img {
 .practical-item .small-note {
   display: inline-block;
   margin-top: 5px;
+}
+.practical-item#kontakt {
+  position: relative;
+  z-index: 1;
+  margin-top: 16px;
+  padding: 24px;
+  background: var(--night);
+  overflow-wrap: anywhere;
 }
 /* Figma: fælles billedområde bag mobilheader og indhold, frem til sidefoden. */
 .page-backdrop {
@@ -934,7 +965,19 @@ img {
   .fiction {
     font-size: 12px;
   }
+  .experience-intro::before {
+    top: calc(-181px - 11.523125vw);
+    left: -57.01073%;
+    width: 203.94726%;
+  }
+  .experience-intro::after {
+    display: none;
+  }
+  .practical-item#kontakt {
+    padding: 32px;
+  }
   .experience-intro {
+    background: none;
     padding-top: 65px;
     min-height: 634px;
     padding-bottom: 45px;
@@ -967,6 +1010,10 @@ img {
     height: 326px;
   }
   .testimonials {
+    background-image:
+      linear-gradient(var(--night), rgba(43, 48, 44, 0.25) 476.63px),
+      url("../images/forest-headlights.webp");
+    background-position: left top, 50.044% -59.296875vw;
     padding-top: 80px;
     min-height: 433px;
   }
