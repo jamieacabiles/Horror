@@ -15,6 +15,108 @@
     <meta property="og:site_name" content="Horror Drive Thru" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/main.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "#organization",
+          "name": "Gruppe 3-3",
+          "description": "Studiegruppen bag det fiktive studieprojekt Horror Drive Thru."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "#website",
+          "name": "Horror Drive Thru",
+          "description": "Et website om et fiktivt Halloween-event med horror drive-thru gennem en mørk skov.",
+          "inLanguage": "da",
+          "publisher": {
+            "@id": "#organization"
+          }
+        },
+        {
+          "@type": [
+            "WebPage",
+            "FAQPage"
+          ],
+          "@id": "#webpage",
+          "name": "Horror Drive Thru – fiktiv Halloween-oplevelse",
+          "description": "Forside for det fiktive Horror Drive Thru med oplysninger om oplevelsen, turens forløb og ofte stillede spørgsmål.",
+          "inLanguage": "da",
+          "isPartOf": {
+            "@id": "#website"
+          },
+          "publisher": {
+            "@id": "#organization"
+          },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Hvor længe varer turen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Turen gennem skoven varer omkring 30–40 minutter."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Køber man billet pr. person eller pr. bil?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "I konceptet købes billetten pr. bil. Sidder I eksempelvis fire i bilen, skal I kun bruge én billet. Hjemmesidens billetdemo foretager ingen betaling eller rigtig reservation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Hvor gammel skal man være for at deltage?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oplevelsen anbefales til børn over 15 år. Det er en anbefaling; hjemmesiden angiver ikke en fast aldersgrænse. For yngre deltagere anbefales tidspunktet kl. 16 samt lukkede døre og vinduer."
+              }
+            }
+          ],
+          "mentions": {
+            "@id": "#tour-list"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "#tour-list",
+          "name": "Sådan foregår turen",
+          "description": "Sådan er forløbet i det fiktive koncept.",
+          "itemListOrder": "https://schema.org/ItemListOrderAscending",
+          "numberOfItems": 4,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Ankom før din tid.",
+              "description": "Ankom gerne 15 minutter før det valgte tidspunkt."
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Find indgangen.",
+              "description": "Følg skiltningen frem til indgangen, og hav billetten klar."
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Kør ind i skoven.",
+              "description": "Personalet viser jer ind."
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Oplev turen fra bilen.",
+              "description": "Undervejs møder I skuespillere, lyde og iscenesatte overraskelser. Bliv i bilen under hele turen, frem til afslutningen."
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="home">
     <a class="skip-link" href="#indhold">Spring til indhold</a>
@@ -165,7 +267,7 @@
         ><a href="praktisk-information.html#kontakt">Kontakt</a>
       </nav>
       <p class="fiction">
-        Fiktivt studieprojekt · Ingen rigtige billetter eller reservationer.
+        Fiktivt studieprojekt af Gruppe 3-3, en studiegruppe · Ingen rigtige billetter eller reservationer.
       </p>
     </footer>
   </body>
